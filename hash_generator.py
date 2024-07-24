@@ -1,9 +1,14 @@
 import hashlib
-import bcrypt
 import os
+from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
+from cryptography.hazmat.backends import default_backend
+from cryptography.hazmat.primitives import hashes
+from base64 import urlsafe_b64encode
+from argon2 import PasswordHasher
 
-# 生成盐（salt）
-def generate_salt(length=16):
+
+# 生成盐（Salt）
+def generate_salt(length=128):
     return os.urandom(length)
 
 # 使用 SHA-256 哈希值
@@ -58,27 +63,42 @@ def strong_hash(data, salt):
     
     return final_hash_value
 
-# 通过 bcrypt 计算哈希值
-def bcrypt_hash(data):
-    salt = bcrypt.gensalt()
-    hashed = bcrypt.hashpw(data.encode('utf-8'), salt)
-    return hashed.decode('utf-8'), salt
+# 通过 Argon2 计算哈希值
+def argon2_hash(data):
+    ph = PasswordHasher()
+    hashed = ph.hash(data)
+    return hashed
 
-# 循环多次哈希值并结合盐和 bcrypt
-def enhanced_strong_hash(data, iterations=10):
+# 使用 PBKDF2 进行密钥衍生
+def pbkdf2_hash(data, salt):
+    kdf = PBKDF2HMAC(
+        algorithm=hashes.SHA256(),
+        length=512,
+        salt=salt,
+        iterations=65536,  # 增加迭代次数
+        backend=default_backend()
+    )
+    key = kdf.derive(data.encode('utf-8'))
+    return urlsafe_b64encode(key).decode('utf-8')
+
+# 循环多次哈希值并结合盐和 Argon2
+def enhanced_strong_hash(data, iterations=65536):
     salt = generate_salt()  # 生成盐
-    # 首先计算 bcrypt 哈希值
-    bcrypt_hash_value, bcrypt_salt = bcrypt_hash(data)
+    # 首先计算 Argon2 哈希值
+    argon2_hash_value = argon2_hash(data)
     
     for _ in range(iterations):
-        # 结合 bcrypt 哈希值进行多层哈希计算
-        bcrypt_hash_value = strong_hash(bcrypt_hash_value, salt)
+        # 结合 Argon2 哈希值进行多层哈希计算
+        argon2_hash_value = strong_hash(argon2_hash_value, salt)
     
-    return bcrypt_hash_value
+    # 最后使用 PBKDF2 进行密钥衍生
+    final_hash_value = pbkdf2_hash(argon2_hash_value, salt)
+    
+    return final_hash_value
 
 # 主函数
 def main():
-    print("Super Strong Hash Generator with Salt and bcrypt")
+    print("Super Strong Hash Generator with SHA-256, BLAKE2b, BLAKE2s, Salt, bcrypt, Argon2, and PBKDF2")
     print("\nEnter '!@exit' to quit.")
     
     while True:
@@ -88,8 +108,8 @@ def main():
             break
         else:
             try:
-                hash_value = enhanced_strong_hash(d, iterations=10)
-                print("Enhanced Strong Hash:", hash_value)
+                hash_value = enhanced_strong_hash(d, iterations=65536)
+                print("Super Strong Hash:", hash_value)
             except Exception as e:
                 print("Error:", str(e))
 
