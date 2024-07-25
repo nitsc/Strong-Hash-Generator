@@ -2,10 +2,11 @@
 
 ## 程序介绍
 
-### Super Strong Hash Generator with Salt and bcrypt
+### Strong Hash Generator - 15 Layers of the Famous Algorithm
+### 强劲的哈希生成器——15层著名的算法
 
 **概述：**
-这个Python程序是一个强大的哈希生成器，它结合了多种哈希算法和加密技术，以生成强而安全的哈希值。
+这个Python程序是一个强大的哈希生成器，它结合了15种哈希算法和5种加密技术，以生成强而安全的哈希值。
 
 **功能特点：**
 
