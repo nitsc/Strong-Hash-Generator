@@ -1,0 +1,7 @@
+LICENSE.txt
+README.md
+setup.py
+example_pkg_nitsc.egg-info/PKG-INFO
+example_pkg_nitsc.egg-info/SOURCES.txt
+example_pkg_nitsc.egg-info/dependency_links.txt
+example_pkg_nitsc.egg-info/top_level.txt

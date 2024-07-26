@@ -32,7 +32,7 @@ def install_dependency():
     up_pip()
     install_package("bcrypt cryptography argon2-cffi blake3 pycryptodome")
     list()
-    print("安装依赖库成功！接下来您就可以正常使用 超强的哈希值生成器 啦")
+    print("安装依赖库成功！接下来您就可以正常使用 SHG_PLUS模块 啦")
     
 if __name__ == "__main__":
     install_dependency()
