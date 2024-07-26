@@ -1,5 +1,5 @@
 ---
-# 使用说明
+# PyPI 库 使用说明
 ## 环境要求
 如果你的Python环境版本高于2.5，并且已经配备了`hashlib`模块，请按照以下步骤操作。
 ### 已安装依赖
@@ -9,6 +9,10 @@
 - `argon2-cffi`
 - `blake3`
 - `pycryptodome`
+那么你可以直接下载`SHG_PLUS`模块：
+```shell
+pip install SHG_PLUS
+```
 那么你可以直接导入`SHG_PLUS`模块：
 ```python
 import SHG_PLUS
