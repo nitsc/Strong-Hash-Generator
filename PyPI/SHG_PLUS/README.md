@@ -9,6 +9,10 @@
 - `argon2-cffi`
 - `blake3`
 - `pycryptodome`
+那么你可以直接下载`SHG_PLUS`模块：
+```shell
+pip install -i https://test.pypi.org/simple/ example-pkg-nitsc==1.0.3
+```
 那么你可以直接导入`SHG_PLUS`模块：
 ```python
 import SHG_PLUS
@@ -17,6 +21,10 @@ import SHG_PLUS
 使用以下方式调用`cycle_strong_hash`函数进行哈希处理：
 ```python
 cycle_strong_hash(data, iterations, length)
+```
+或参考：
+```web
+[example of using SHG_PLUS](https://github.com/nitsc/Strong-Hash-Generator/edit/main/PyPI/SHG_PLUS/example_import.py)
 ```
 其中：
 - `data`：需要哈希的字符串。
