@@ -11,7 +11,7 @@
 - `pycryptodome`
 那么你可以直接下载`SHG`模块：
 ```shell
-pip install -i https://test.pypi.org/simple/ SHG
+pip install -i https://test.pypi.org/simple/ example-pkg-SHG
 ```
 那么你可以直接导入`SHG_PLUS`模块：
 ```python
