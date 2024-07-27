@@ -4,7 +4,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
  
 setuptools.setup(
-    name="example-pkg-SHG", # 用自己的名替换其中的YOUR_USERNAME_
+    name="SHG", # 用自己的名替换其中的YOUR_USERNAME_
     version="2.0.1",    #包版本号，便于维护版本
     author="Zhou Nitsc(Dean of NITSC)",    #作者，可以写自己的姓名
     author_email="dministrator1234567890dddaz@outlook.com",    #作者联系方式，可写自己的邮箱地址

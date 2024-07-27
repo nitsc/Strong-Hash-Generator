@@ -6,9 +6,9 @@ def main():
     # date，将要加密的信息
     data = "NITSC"
     # iterations，算法迭代的次数
-    iterations = 2011
+    iterations = 100
     # length，动态的长度
-    length = 16384
+    length = 128
     # AES 动态密钥 和 PBKDF2 动态密钥 长度可在 SHG 中修改，不过要注意长度符合 AES 和 PBKDF2 的要求
     # 获取返回的元组
     result = SHG.cycle_strong_hash(data, iterations,length)

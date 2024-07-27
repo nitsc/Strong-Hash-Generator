@@ -1,3 +1,17 @@
+Metadata-Version: 2.1
+Name: SHG
+Version: 2.0.1
+Summary: 这个Python程序是一个强大的哈希生成器，它结合了10种著名先进哈希算法和5种加密技术，以生成强而安全的哈希值。
+Home-page: https://github.com/nitsc/Strong-Hash-Generator
+Author: Zhou Nitsc(Dean of NITSC)
+Author-email: dministrator1234567890dddaz@outlook.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
 ---
 # 使用说明
 ## 环境要求
