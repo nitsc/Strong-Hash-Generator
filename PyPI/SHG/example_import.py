@@ -1,5 +1,5 @@
 # 导入必要的函数
-import SHG_PLUS
+import SHG
 
 # 定义主函数
 def main():
