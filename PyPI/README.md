@@ -11,7 +11,7 @@
 - `pycryptodome`
 那么你可以直接下载`SHG`模块：
 ```shell
-pip install -i https://test.pypi.org/simple/ example-pkg-SHG
+pip install -i https://test.pypi.org/simple/ SHG
 ```
 那么你可以直接导入`SHG_PLUS`模块：
 ```python
@@ -35,7 +35,8 @@ cycle_strong_hash(data, iterations, length)
 ### 安装依赖
 如果你尚未安装所需的依赖库，可以使用以下命令进行安装：
 ```shell
-pip install bcrypt cryptography argon2-cffi blake3 pycryptodome
+pip install bcrypt cryptography argon2-cffi
+pip install  blake3 pycryptodome
 ```
 或者，你也可以通过以下链接下载安装依赖的脚本：
 [安装依赖脚本](https://github.com/nitsc/Strong-Hash-Generator/blob/main/PyPI/SHG/install_dependencies.py)
