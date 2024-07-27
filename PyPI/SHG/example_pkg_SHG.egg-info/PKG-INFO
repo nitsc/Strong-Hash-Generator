@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: example-pkg-SHG
-Version: 2.0.0
+Version: 2.0.1
 Summary: 这个Python程序是一个强大的哈希生成器，它结合了10种著名先进哈希算法和5种加密技术，以生成强而安全的哈希值。
 Home-page: https://github.com/nitsc/Strong-Hash-Generator
 Author: Zhou Nitsc(Dean of NITSC)
@@ -25,7 +25,7 @@ License-File: LICENSE.txt
 - `pycryptodome`
 那么你可以直接下载`SHG`模块：
 ```shell
-未定，请参考 https://github.com/nitsc/Strong-Hash-Generator/blob/main/PyPI/SHG/MEADME.md
+pip install -i https://test.pypi.org/simple/ example-pkg-SHG
 ```
 那么你可以直接导入`SHG_PLUS`模块：
 ```python

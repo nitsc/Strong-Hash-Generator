@@ -4,14 +4,14 @@ import SHG
 # 定义主函数
 def main():
     # date，将要加密的信息
-    data = "jweremy"
+    data = "NITSC"
     # iterations，算法迭代的次数
-    iterations = 1
+    iterations = 2011
     # length，动态的长度
     length = 16384
-    # AES 动态密钥 和 PBKDF2 动态密钥 长度可在 SHG_PLUS 中修改，不过要注意长度符合 AES 和 PBKDF2 的要求
+    # AES 动态密钥 和 PBKDF2 动态密钥 长度可在 SHG 中修改，不过要注意长度符合 AES 和 PBKDF2 的要求
     # 获取返回的元组
-    result = SHG_PLUS.cycle_strong_hash(data, iterations,length)
+    result = SHG.cycle_strong_hash(data, iterations,length)
     # 将元组字符串化以执行操作
     result = str(result)
     # 将字符串中的括号替换为空字符串
