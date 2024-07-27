@@ -1,7 +1,0 @@
-LICENSE.txt
-README.md
-setup.py
-SHG.egg-info/PKG-INFO
-SHG.egg-info/SOURCES.txt
-SHG.egg-info/dependency_links.txt
-SHG.egg-info/top_level.txt
