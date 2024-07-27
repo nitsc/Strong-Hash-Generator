@@ -9,13 +9,13 @@
 - `argon2-cffi`
 - `blake3`
 - `pycryptodome`
-那么你可以直接下载`SHG_PLUS`模块：
+那么你可以直接下载`SHG`模块：
 ```shell
-pip install -i https://test.pypi.org/simple/ example-pkg-nitsc==1.0.3
+pip install -i https://test.pypi.org/simple/ SHG
 ```
 那么你可以直接导入`SHG_PLUS`模块：
 ```python
-import SHG_PLUS
+import SHG
 ```
 #### 调用`cycle_strong_hash`函数
 使用以下方式调用`cycle_strong_hash`函数进行哈希处理：
@@ -24,7 +24,7 @@ cycle_strong_hash(data, iterations, length)
 ```
 或参考：
 ```web
-[example of using SHG_PLUS](https://github.com/nitsc/Strong-Hash-Generator/edit/main/PyPI/SHG_PLUS/example_import.py)
+[example of using SHG_PLUS](https://github.com/nitsc/Strong-Hash-Generator/blob/main/PyPI/SHG/example_import.py)
 ```
 其中：
 - `data`：需要哈希的字符串。
@@ -38,7 +38,7 @@ cycle_strong_hash(data, iterations, length)
 pip install bcrypt cryptography argon2-cffi blake3 pycryptodome
 ```
 或者，你也可以通过以下链接下载安装依赖的脚本：
-[安装依赖脚本](https://github.com/nitsc/Strong-Hash-Generator/PyPI/install_dependencies.py)
+[安装依赖脚本](https://github.com/nitsc/Strong-Hash-Generator/blob/main/PyPI/SHG/install_dependencies.py)
 下载后，运行以下命令：
 ```shell
 python install_dependencies.py
