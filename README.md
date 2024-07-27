@@ -8,11 +8,6 @@
 这个Python程序是一个强大的哈希生成器，它结合了多种哈希算法和加密技术，以生成强而安全的哈希值。
 `hash_security_test.py` 用于检测生成的哈希值的安全性。
 
-**安装方法：**
-```shell
-pip install -i https://test.pypi.org/simple/ example-pkg-SHG
-```
-
 **功能特点：**
 
 **PLUS 版本** 提供了以下功能：
