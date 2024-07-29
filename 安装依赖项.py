@@ -30,7 +30,8 @@ def list():
 
 def install_dependency():
     up_pip()
-    install_package("bcrypt cryptography argon2-cffi blake3 pycryptodome")
+    install_package("bcrypt cryptography argon2-cffi")
+    install_package("blake3 pycryptodome")
     list()
     print("安装依赖库成功！接下来您就可以正常使用 超强的哈希值生成器 啦")
     
